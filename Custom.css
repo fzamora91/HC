@@ -1,0 +1,139 @@
+:root {
+   
+    --primaryColor: #68217a;
+    --secondaryColor: #f4f4f4;
+    --bgMenuActive: #8e47a0;
+    --bgButton: #68217a;
+    --logoImageUrl: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/.NET_Foundation_Logo.svg/1200px-.NET_Foundation_Logo.svg.png');
+    --bgAside: var(--primaryColor);
+   
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+}
+
+    table tr td, table tr th {
+        width: 10%;
+        font-size: 12px;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+
+@media only screen and (max-width:1000px) {
+    /* For tablets: */
+
+    .hc-table-container {
+        padding: 2em;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 70%;
+        border-collapse: collapse;
+    }
+
+    thead tr {
+        display: flex;
+    }
+
+    td {
+        display: flex;
+    }
+
+        td::before {
+            content: attr(data-cell) " : ";
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+
+    /**table, tr, td, th {
+        display: block;
+    }
+
+    thead tr {
+        display: block;
+    }
+
+    table tr td, table tr th {
+        width: 13%;
+        display: block;
+        font-size: 9px;
+        word-wrap: break-word;
+        white-space: normal;
+    }**/
+}
+
+@media only screen and (max-width:768px) {
+    /* For tablets: */
+
+    /*table , thead, tbody, th, td, tr{display:block;}
+
+    thead tr{display:none}*/
+
+    /* table, tr, td, th {
+        display: inline-block;
+    }*/
+
+    
+
+    .hc-table-container {
+        padding: 0.4em;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    thead tr, tbody tr {
+        width: 100%;
+        display: inline-table;
+    }
+        thead tr th, tbody tr td {
+            display: inline-table;
+            width: inherit;
+            font-size: 9px;
+            text-align: left;
+        }
+    td::before {
+        content: attr(data-cell) " : ";
+        /*font-size: 9px;*/
+        text-transform: capitalize;
+    }
+
+   
+
+    /**table tr td, table tr th {
+        width: 10%;
+        display: block;
+        font-size: 9px;
+        word-wrap: break-word;
+        white-space: normal;
+        /*white-space:nowrap;*/
+    }*/
+
+
+}
+
+
+@media (max-width:500px) {
+
+    table {
+        width: 50%;
+    }
+
+        table tr td, table tr th {
+            width: 13%;
+            display: flex;
+            font-size: 4px;
+            word-wrap: break-word;
+            white-space: normal;
+            overflow: hidden;
+            /*white-space:nowrap;*/
+        }
+}
